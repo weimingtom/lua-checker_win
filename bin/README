@@ -1,0 +1,20 @@
+This flex is built for the purpose of building Postgres on Windows.
+
+It is accompanied by a cygwin1.dll which is needed to run it. 
+
+The licenses for flex and cygwin are also present. To comply with the
+license that applies to cygwin, the source code for building the DLL is
+available at the same place the zip file containing these binaries, on the
+Postgres ftp site and mirrors.
+
+To run this version of flex, you will need to set the M4 environment variable
+to point to your installation of m4. You need one of these in order to run
+both bison and flex, and it sometimes comes packaged with bison.
+
+If you are using this in a buildfarm member, you can set that environment
+variable in its config file, in the build_env stanza, something like:
+
+	M4 => 'c:\path\to\bin\m4.exe',
+
+Andrew Dunstan
+adunstan@postgresql.org
